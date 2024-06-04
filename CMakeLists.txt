@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
 
-project(my-project)
+project(ignosi-dll)
 
 execute_process(
   COMMAND
@@ -12,6 +12,5 @@ enable_testing()
 
 add_compile_definitions(PUBLIC $<$<CONFIG:Debug>:DEBUG>)
 
-add_subdirectory("app")
 add_subdirectory("lib")
 add_subdirectory("test")
