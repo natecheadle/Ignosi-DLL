@@ -13,3 +13,9 @@ find_package(GTest CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE GTest::gtest ignosi-dll-macros)
 
 gtest_add_tests(TARGET ${PROJECT_NAME})
+
+install(
+  TARGETS ${PROJECT_NAME}
+  RUNTIME DESTINATION bin
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib)
